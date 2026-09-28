@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vh;
+                margin: 0;
+                font-family: 'helvetica Neue',Arial, sans-serif;
+            
+            }
+           .logocontainer{
+            position: relative;
+            display: flex;
+            flex-direction:column ;
+            align-items: flex-start;
+            color: #000000;
+           }
+           .brandname{
+            display: flex;
+            align-items:center;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2px;
+           }
+           .glasses-icon{
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: -4px;
+            height: 72px;
+           }
+           .lens{
+            width: 44px;
+            height: 44px;
+            border: 8px solid #000000;
+            border-radius: 15px;
+            box-sizing: border-box;
+           }
+           .bridge{
+            width: 16px;
+            height: 7px;
+            background-color: #000000;
+           }
+           .left-arm{
+            width: 7px;
+            height: 55px;
+            background-color: #000000;
+            position: absolute;
+            left: -18px;
+            top: -24px;
+            transform: rotate(-45deg);
+            border-radius: 4px;
+           }
+           .p-stem{
+            width: 7px;
+            height: 55px;
+            position: absolute;
+            background-color: #000000;
+            left: 59px;
+            top: 36px;
+           }
+           .text{
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            left: 110px;
+            top: -5;
+            font-size: 72px;
+            font-weight: 700;
+           }
+           .trademark{
+            display: flex;
+            position: absolute;
+            left: 250px;
+            top:10px
+           }
+           .subtitle{
+            display: flex;
+            position: absolute;
+            left: 70px;
+            top: 65px;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="logocontainer">
+            <div class="brand-name">
+                <div class="glasses-icon">
+                    <div class="left-arm"></div>
+                    <div class="lens"></div>
+                    <div class="bridge"></div>
+                    <div class="lens"></div>
+                    <div class="p-stem"></div>
+                </div>
+                <span class="text">tima</span>
+                <span class="trademark">®</span>
+            </div>
+            <span class="subtitle">shop</span>
+        </div>
+    </body>

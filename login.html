@@ -1,0 +1,267 @@
+<html>
+    <head>
+        
+        <title>Optima-Custom Your Style</title>
+     
+        <style>
+            body{
+                display: flex;
+             justify-content: center;
+                align-items: center;
+                background-color: white;
+            }
+            .container{
+                display: flex;
+position: absolute;
+left:600px;
+               overflow: hidden;
+                       height: 800px;
+                       width: 800px;
+                       background-color:white ;
+                       box-shadow: 0px 0px 15px 3px  black;
+                       border-radius: 10px;
+            }
+            .logo{
+                display: flex;
+            align-items: center;
+                height: 800px;
+                width:400px;
+                background-image:linear-gradient(#00c0ff,#2c0f7cd3);
+            }
+            .registration{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 800px;
+                width:400px;
+            }
+            .reg-heading{
+                font-size: 30px;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+                display: flex;
+                position: absolute;
+                top:150px;
+                color: #000000;
+            }
+            .reg-text{
+                font-size: 15px;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                top:200px;
+                color: #000000;
+                margin-left: 60px;
+                 margin-right: 50px;
+                line-height: 25px;
+            }
+         @view-transition{
+                navigation:auto;
+            }
+          ::view-transition-group(root){
+            animation-duration: 0.7s;
+          }
+            /*form*/
+           form{
+            margin-top: 70px;
+           }
+           input{
+            margin-bottom:10px ;
+             margin-top: 10px;
+            padding: 5px;
+            width:300px;
+            height: 40px;
+            color:#000000;
+            background-color: rgb(0,0,0,0.1);
+            border: none;
+            border-radius: 4px;
+           
+           }
+          
+           label{
+            font-size: small;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #000000;
+           }
+           .btn{
+            width: 300px;
+            height: 40px;
+            padding: 10px;
+            margin-top: 10px;
+            background-image:linear-gradient(#00c0ff,#2c0f7cd3);
+            border: none;
+            color: white;
+            border-radius: 4px;
+           }
+           .span-text{
+            font-size: small;
+               font-family: 'helvetica Neue',Arial, sans-serif;
+               line-height: 3;
+               margin-left: 50px;
+           }
+            /*LOGO*/
+             body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vh;
+                margin: 0;
+                font-family: 'helvetica Neue',Arial, sans-serif;
+            
+            }
+           .logocontainer{
+            position: relative;
+            display: flex;
+            flex-direction:column ;
+            align-items: flex-start;
+            color: #000000;
+            left: 80px;
+           }
+           .brandname{
+            display: flex;
+            align-items:center;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2px;
+           }
+           .glasses-icon{
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: -4px;
+            height: 72px;
+           }
+           .lens{
+            width: 44px;
+            height: 44px;
+            border: 8px solid #000000;
+            border-radius: 15px;
+            box-sizing: border-box;
+           }
+           .bridge{
+            width: 16px;
+            height: 7px;
+            background-color: #000000;
+           }
+           .left-arm{
+            width: 7px;
+            height: 55px;
+            background-color: #000000;
+            position: absolute;
+            left: -18px;
+            top: -24px;
+            transform: rotate(-45deg);
+            border-radius: 4px;
+           }
+           .p-stem{
+            width: 7px;
+            height: 55px;
+            position: absolute;
+            background-color: #000000;
+            left: 59px;
+            top: 36px;
+           }
+           .text{
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            left: 110px;
+            top: -5;
+            font-size: 72px;
+            font-weight: 700;
+           }
+           .trademark{
+            display: flex;
+            position: absolute;
+            left: 250px;
+            top:10px
+           }
+           .subtitle{
+            display: flex;
+            position: absolute;
+            left: 70px;
+            top: 65px;
+           }
+
+           #message{
+    margin-top:10px;
+    font-size:15px;
+    font-weight:bold;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+        <div class="logo">
+            <div class="logocontainer">
+            <div class="brand-name">
+                <div class="glasses-icon">
+                    <div class="left-arm"></div>
+                    <div class="lens"></div>
+                    <div class="bridge"></div>
+                    <div class="lens"></div>
+                    <div class="p-stem"></div>
+                </div>
+                <span class="text">tima</span>
+                <span class="trademark">®</span>
+            </div>
+            <span class="subtitle">shop</span>
+        </div>
+        </div> 
+
+ 
+         <div class="registration">
+        <div class="reg-heading">LOGIN</div>
+        <div class="reg-text"><p>Hi Specsy! Login or Signup to track your orders & get 
+           access to exclusive deals.</p>
+        </div>
+            <form method="post" action="login.php" >
+                
+                <label for="username">USERNAME </label><br>
+                <input type="text" name="username" id="username"><br>
+
+                <label for="pass">PASSWORD </label><br>
+                <input type="password" name="pass" id="pass"><br>
+                <br>
+                <div id="message"></div>
+               <button type="button" class="btn" onclick="login()">Login</button><br>
+               <span class="span-text">
+                    Don't have an account?
+                    <a href="registration.html">Sign Up</a>
+                </span>
+                </form>
+         </div>
+        </div>
+
+      <script>
+        function login(){
+            const username=document.getElementById("username").value;
+            const pass=document.getElementById("pass").value;
+            var x=new XMLHttpRequest();
+            x.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("message").innerHTML=this.responseText ;
+                }
+                
+    if(this.responseText.trim() == "success"){
+        document.getElementById("message").style.color="green";
+         window.location.href = "dashboard.php";
+    }else{
+document.getElementById("message").style.color="red";
+        msg.className = "error";
+        msg.innerHTML = this.responseText;
+
+    }
+            };
+
+       x.open("POST","login.php",true);
+        x.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        x.send("username=" + encodeURIComponent(username) + "&pass=" + encodeURIComponent(pass));
+    }
+       </script>
+    </body>
+</html>

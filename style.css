@@ -1,0 +1,597 @@
+        
+        .btn-container{
+            width: auto;
+            height: 40px;
+            background-image:radial-gradient(darkblue,black); 
+            border-radius: 4px;
+            padding-left: 10px;
+            
+        }
+        
+        .hidden-nav{
+            display: none;
+            flex-direction: column;
+            width: 250px;
+            background-color: whitesmoke;
+            padding:10px;
+            border-radius: 2px;
+            border-width: 1px solid black;
+            border-style: groove;
+        }
+        .hidden-nav a{
+            color: black;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        .hidden-nav a:hover{
+            background-color: wheat;
+        }
+        .hidden-nav.show{
+            display: flex;
+        }
+        button{
+            font-size: 30px;
+            color:white;
+       display: contents;
+        }
+        .btn-container i{
+            color:white;
+            font-size:30px;
+            position: relative;
+            left:15px;
+        margin-right:15px;
+
+         }
+         /*slide show*/
+        .slide-show-container{
+            margin-top: 10px;
+            background-color: #000000;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            height: 800px;
+            width: 100%;
+             background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+            animation: slidefade 15s infinite ease-in-out;
+         }
+         @keyframes slidefade{
+            0%,12.5%{
+                background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_24_31\ PM.png");
+            }
+             16.6%,29.1%{
+                background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_33_25\ PM.png");
+            }
+            33.3%,45.8%{
+                background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_36_10\ PM.png");
+            }
+             50%,62.5%{
+                background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_38_21\ PM.png");
+            }
+             83.3%,95.8%{
+                background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_40_41\ PM.png");
+            }
+            100%{
+                background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_24_31\ PM.png");
+            }
+         }
+         .categories-container{
+            height:auto;
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-start;
+           align-items:center;
+           gap:20px;
+              padding: 10px;
+         }
+       .categories{
+        height: 150px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        padding: 10px;
+        border-radius: 10px;
+        gap:40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .categories:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }
+       .categories:nth-child(1){
+        background-image: url("photos/eyeglasses.webp");
+       }
+        .categories:nth-child(2){
+        background-image: url("photos/sunglasses.webp");
+       }
+        .categories:nth-child(3){
+        background-image: url("photos/contactlens.webp");
+       }
+        .categories:nth-child(5){
+        background-image: url("photos/spetialpower.webp");
+       }
+       .categories a{
+           text-decoration: none;
+           color:black;
+           display:block;
+       }
+       .shape-container{
+        height:auto;
+        display: flex;
+        flex-direction: row;
+      justify-content: flex-start;
+        align-items: center;
+        gap:20px;
+          padding: 10px;
+       }
+       .shape{
+        background-color: white;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        padding: 10px;
+        border-radius: 10px;
+        gap:20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+         position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+       }
+        .shape:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }
+       .shape:nth-child(1){
+        background-image: url("photos/rectangle_eyeglass.webp");
+       }
+       .shape:nth-child(2){
+        background-image: url("photos/cateye_eyeglasses.webp");
+       }
+       .shape:nth-child(3){
+        background-image: url("photos/aviator_eyeglass.webp");
+       }
+       .shape:nth-child(4){
+        background-image: url("photos/geometric_eyeglass.webp");
+       }
+       .shape:nth-child(5){
+        background-image: url("photos/round_eyeglasses.webp");
+       }
+       .shape:nth-child(6){
+        background-image: url("photos/clubmaster_eyeglass.webp");
+       }
+       .shape:nth-child(7){
+        background-image: url("photos/square_eyeglasses.webp");
+       }
+       .shape a{
+         text-decoration: none;
+           color:black;
+           display:block;
+       }
+       .shapesun-container{
+        height:auto;
+        display: flex;
+        flex-direction: row;
+      justify-content: flex-start;
+        align-items: center;
+        gap:20px;
+          padding: 10px;
+       }
+       .shapesun a{
+         text-decoration: none;
+           color:black;
+           display:block;
+       }
+       .shapesun{
+         background-color: white;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        padding: 10px;
+        border-radius: 10px;
+        gap:20px;
+         position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       .shapesun:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }  
+        .shapesun:nth-child(1){
+        background-image: url("photos/rectangle_sunglass.webp");
+       }
+       .shapesun:nth-child(2){
+        background-image: url("photos/cateye_sunglass.webp");
+       }
+       .shapesun:nth-child(3){
+        background-image: url("photos/aviator_sunglass.webp");
+       }
+       .shapesun:nth-child(4){
+        background-image: url("photos/geometric_sunglass.webp");
+       }
+       .shapesun:nth-child(5){
+        background-image: url("photos/round_sunglasses.webp");
+       }
+       .shapesun:nth-child(6){
+        background-image: url("photos/clubmaster_sunglass.webp");
+       }
+       .shapesun:nth-child(7){
+        background-image: url("photos/squre_sunglasses.webp");
+       }
+       .photo-1{
+         display: flex;
+           background-color: aquamarine;
+            height: 800px;
+            width: auto;
+            margin-top: 40px;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("photos/ChatGPT\ Image\ Jun\ 28\,\ 2026\,\ 01_24_31\ PM.png");
+       }
+        .photo-2{
+        display: flex;
+            height:1400px;
+            width: auto;
+            background-color: aquamarine;
+            margin-top: 40px;
+             background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("photos/promotion.png");
+       }
+       .exclusive-container{
+          height:auto;
+          width:auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+      
+        padding: 10px;
+        flex-wrap: wrap;
+       }
+       .exclusive{
+       background-color: white;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+       }
+       .exclusive:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+        border: 1px solid #000000;
+       }
+         .exclusive:nth-child(1){
+        background-image: url("photos/crystalclear.webp");
+       }
+       .exclusive:nth-child(2){
+        background-image: url("photos/bestseller.webp");
+       }
+       .exclusive:nth-child(3){
+        background-image: url("photos/boldsignature.webp");
+       }
+       .exclusive:nth-child(4){
+        background-image: url("photos/devilware.webp");
+       }
+       .exclusive:nth-child(5){
+        background-image: url("photos/2in1.webp");
+       }
+       .exclusive:nth-child(6){
+        background-image: url("photos/featherlight.webp");
+       }
+       .brand-container{
+        width: auto;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px;
+       }
+       .brand{ 
+        height: 250px;
+        width:250px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items:last baseline;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:contain;
+        overflow: hidden;
+         position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+       }
+       .brand:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+       }
+       .brand:nth-child(1){
+        background-image: url("photos/vincent chase.webp");
+       }
+       .brand:nth-child(2){
+        background-image: url("photos/hustlr1.webp");
+       }
+       .brand:nth-child(3){
+        background-image: url("photos/johnjacob.webp");
+       }
+       .brand:nth-child(4){
+        background-image: url("photos/aqua1.webp");
+       }
+       .brand:nth-child(5){
+        background-image: url("photos/hopper1.webp");
+       }
+       .primium-container{
+        width: auto;
+        height: auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        overflow-y:hidden;
+        padding: 10px;
+        column-gap: 0px;
+       }
+       .primium{
+       height: 300px;
+        width:300px;
+         box-shadow: 0 0 15px #000000;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items:last baseline;
+      position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+       }
+        
+       .primium:nth-child(1){
+        background-image: url("photos/johanjacobsprimium.webp");
+       }
+       .primium:nth-child(2){
+        background-image: url("photos/owndays.webp");
+       }
+       .primium:nth-child(3){
+        background-image: url("photos/lepetit.webp");
+       }
+       .primium:nth-child(4){
+        background-image: url("photos/fossils.webp");
+       }
+       .small-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap:20px;
+        padding:20px;
+       }
+       .big-card{
+        height:600px;
+        width:600px;
+        background-color: white;
+        border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: last baseline;
+        gap:10px;
+        padding: 10px;
+        position: relative;
+        background-image: url("photos/meller.webp");
+         background-repeat: no-repeat;
+       background-position: center;
+       background-size:contain;
+        position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+       }
+         .big-card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }
+        @media(min-width:768px){
+        .big-card{
+            grid-template-columns:0fr 0fr;
+        }
+       }
+       @media(min-width:768px){
+        .primium-container{
+            grid-template-columns:0fr 0fr;
+        }
+       }
+        .primium:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }
+       .checkup-container{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction:row ;
+        gap:20px;
+        padding: 10px;
+        padding-left: 30px;
+       }
+       .checkup{
+        background-color: white;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        padding: 10px;
+         box-shadow: 0 0 15px #000000;
+         border-radius: 25px;
+           position: relative;
+        transition:transform 0.3s cubic-bezier(0.25,0.8,0.25,1),box-shadow 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size:contain;
+       }
+         .checkup:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }
+    .checkup:nth-child(1){
+        background-image: url("photos/nereststore.webp");
+       }
+       .checkup:nth-child(2){
+        background-image: url("photos/scheduleathome.webp");
+       }
+       .checkup:nth-child(3){
+        background-image: url("photos/eyetestonline.jpg");
+       }
+        .logo{
+            background-color: rgb(9, 179, 179);
+            margin-top: 40px;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+                height: 300px;
+                width:auto;
+                background-image: url("photos/.webp");
+                 box-shadow: 0 0 15px #000000;
+            }
+            .logocontainer{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            
+           }
+           .brandname{
+            display: flex;
+            align-items:center;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2px;
+           }
+           .glasses-icon{
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: -4px;
+            height: 72px;
+           }
+           .lens{
+            width: 44px;
+            height: 44px;
+            border: 8px solid #000000;
+            border-radius: 15px;
+            box-sizing: border-box;
+           }
+           .bridge{
+            width: 16px;
+            height: 7px;
+            background-color: #000000;
+           }
+           .left-arm{
+            width: 7px;
+            height: 55px;
+            background-color: #000000;
+            position: absolute;
+            left: -18px;
+            top: -24px;
+            transform: rotate(-45deg);
+            border-radius: 4px;
+           }
+           .p-stem{
+            width: 7px;
+            height: 55px;
+            position: absolute;
+            background-color: #000000;
+            left: 59px;
+            top: 36px;
+           }
+           .text{
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            left: 110px;
+            top: -5;
+            font-size: 72px;
+            font-weight: 700;
+           }
+           .trademark{
+            display: flex;
+            position: absolute;
+            left: 250px;
+            top:10px
+           }
+           .subtitle{
+            display: flex;
+            position: absolute;
+            left: 70px;
+            top: 65px;
+           }
+           .h4{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top:-90px;
+            left: 60px;
+            font-size: 20px;
+            color: goldenrod;
+           }
+           .footer-container{
+            height:300px;
+            width: auto;
+            background-image: radial-gradient(darkblue,black);
+            color: white;
+            padding: 40px;
+           }
+          .footer{
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 18px;
+            margin-top: 40px;
+          line-height: 20px;
+           }

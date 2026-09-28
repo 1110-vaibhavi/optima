@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spectacle Prescription</title>
+
+    <link rel="stylesheet" href="bootstrap-icons.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+        }
+
+        .container{
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:50px;
+            padding:20px;
+        }
+
+        .powertype-container,
+        .lens-container,
+        .addpower-container{
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            height:660px;
+            gap:15px;
+            width:400px;
+            background:bisque;
+            padding:30px;
+            border-radius:25px;
+        }
+
+        .step{
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            background:#fff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .powertype,
+        .lenstype{
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            background:white;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.2);
+            cursor:pointer;
+        }
+
+        .powertype input,
+        .lenstype input{
+            position:absolute;
+            inset:0;
+            opacity:0;
+            cursor:pointer;
+        }
+
+        .powertype:has(input:checked),
+        .lenstype:has(input:checked){
+            border:2px solid #6a4028;
+            background:#fdfaf7;
+        }
+
+        .powertype p,
+        .lenstype p{
+            color:#444;
+            margin-top:8px;
+            font-size:14px;
+        }
+
+        .powertype i,
+        .lenstype i{
+            position:absolute;
+            right:15px;
+            top:15px;
+            font-size:20px;
+        }
+
+        .later{
+              padding:12px 20px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-size:16px;
+        }
+        .later:hover{
+             background:darkblue;
+        }
+        #showPrescriptionBtn{
+            padding:12px 20px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        #showPrescriptionBtn:hover{
+            background:darkblue;
+        }
+
+        /* IMPORTANT */
+        .hidden{
+            display:none;
+        }
+
+        #prescriptionForm{
+            width:100%;
+            background:#fff;
+            border-radius:10px;
+            padding:20px;
+            margin-top:20px;
+            box-shadow:0 0 10px rgba(0,0,0,.2);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table th,
+        table td{
+            border:1px solid #ccc;
+            padding:10px;
+            text-align:center;
+        }
+
+        input[type=text]{
+            width:100%;
+            padding:8px;
+        }
+
+        .save-btn{
+            padding:10px 18px;
+            background:green;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+.upload-btn{
+    background:#28a745;
+    color:white;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.upload-btn:hover{
+    background:#1f7d36;
+}
+
+#fileName{
+    color:#444;
+    font-size:14px;
+}
+
+#previewImage{
+    width:250px;
+    max-height:250px;
+    object-fit:contain;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:5px;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+<form action="save_prescription.php" method="POST" enctype="multipart/form-data">
+    <!-- Power Type -->
+    <div class="powertype-container">
+
+        <div class="step">1</div>
+
+        <h2>Power Type</h2>
+        <h3>Select your Power Type</h3>
+
+        <label class="powertype">
+            <input type="radio" name="powertype" value="with_power">
+            Power
+            <p>Positive, Negative or Cylindrical</p>
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="powertype">
+            <input type="radio" name="powertype" value="zero_power">
+            Zero Power
+            <p>Blue Light Block for Screen Protection</p>
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="powertype">
+            <input type="radio" name="powertype" value="reading_power">
+            Reading Power
+            <p>With power for near vision only</p>
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="powertype">
+            <input type="radio" name="powertype" value="progressive">
+            Progressive / Bifocal
+            <p>Two powers in one eye</p>
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="powertype">
+            <input type="radio" name="powertype" value="frame_only">
+            Frame Only
+            <p>With no lenses</p>
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+    </div>
+
+    <!-- Lens Type -->
+    <div class="lens-container">
+
+        <div class="step">2</div>
+
+        <h2>Lenses</h2>
+        <h3>Select Lens Type</h3>
+
+        <label class="lenstype">
+            <input type="radio" name="lenstype">
+            Anti-Glare Premium
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="lenstype">
+            <input type="radio" name="lenstype">
+            Anti-Glare + Blue Screen
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="lenstype">
+            <input type="radio" name="lenstype">
+            Office Lens
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="lenstype">
+            <input type="radio" name="lenstype">
+            Photochromic (Transition)
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+        <label class="lenstype">
+            <input type="radio" name="lenstype">
+            Progressive (No-Line Multifocal)
+            <i class="bi bi-arrow-right"></i>
+        </label>
+
+    </div>
+
+    <!-- Prescription -->
+    <div class="addpower-container">
+        <div class="step">3</div>
+        <h2>ADD Power</h2>
+        <h3>I don't Know My Power</h3>
+        <button class="later">Submit Power Later</button>
+         <h3>I Know My Power</h3>
+        <button id="showPrescriptionBtn">
+            Add Spectacle Prescription
+        </button>
+         <label for="prescriptionUpload" class="upload-btn">
+    Upload Prescription
+    </label>
+ <input
+type="file"
+id="prescriptionUpload"
+name="prescription_file"
+accept=".jpg,.jpeg,.png,.pdf"
+hidden>
+     <button type="submit" class="save-btn">
+Save Prescription
+</button>
+    <p id="fileName">No file selected</p>
+
+    <img id="previewImage" style="display:none;">
+
+        <div id="prescriptionForm" class="hidden">
+
+            <h2>Spectacle Prescription Form</h2>
+
+            <br>
+
+            <form>
+
+                <table>
+
+                    <tr>
+                        <th></th>
+                        <th>SPH</th>
+                        <th>CYL</th>
+                        <th>AXIS</th>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Right Eye (OD)</strong></td>
+                        <td><input type="text" name="right_sph"></td>
+                        <td><input type="text" name="right_cyl"></td>
+                        <td><input type="text" name="right_axis"></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Left Eye (OS)</strong></td>
+                        <td><input type="text" name="left_sph"></td>
+                        <td><input type="text" name="left_cyl"></td>
+                        <td><input type="text" name="left_axis"></td>
+                    </tr>
+
+                </table>
+
+                <br>
+
+                <label><strong>PD (Pupillary Distance)</strong></label>
+
+                <br><br>
+
+                <input type="text" name="pd">
+
+                <br><br>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+</form>
+<script>
+
+const button = document.getElementById("showPrescriptionBtn");
+const form = document.getElementById("prescriptionForm");
+
+button.addEventListener("click", function () {
+
+    form.classList.toggle("hidden");
+
+    if(form.classList.contains("hidden")){
+        button.innerText = "Add Spectacle Prescription";
+    }else{
+        button.innerText = "Hide Prescription Form";
+    }
+
+});
+const upload = document.getElementById("prescriptionUpload");
+const fileName = document.getElementById("fileName");
+const preview = document.getElementById("previewImage");
+
+upload.addEventListener("change", function () {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    fileName.innerText = "Selected: " + file.name;
+
+    if (file.type.startsWith("image/")) {
+
+        const reader = new FileReader();
+
+        reader.onload = function(e){
+            preview.src = e.target.result;
+            preview.style.display = "block";
+        };
+
+        reader.readAsDataURL(file);
+
+    } else {
+
+        preview.style.display = "none";
+
+    }
+
+});
+</script>
+
+</body>
+</html>
